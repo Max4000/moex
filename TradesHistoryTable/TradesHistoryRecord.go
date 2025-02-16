@@ -2,7 +2,6 @@ package TradesHistoryTable
 
 import (
 	"encoding/xml"
-	"moex/AbstractTableStruct"
 	"strconv"
 	"strings"
 	"time"

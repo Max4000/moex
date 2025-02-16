@@ -6,9 +6,6 @@ import (
 	"moex/AbstractTableStruct"
 	"moex/TradesHistoryTable"
 	"moex/utils"
-	"strconv"
-	"strings"
-	"time"
 )
 
 const rowElementName = "row"
@@ -17,15 +14,6 @@ const countRecordsInBasket = 100_000
 type Rows []AbstractTableStruct.AbstractRecord
 
 type Baskets []Rows
-
-/*
-func DealRecordToStr(rec *TradesHistoryRecord) string {
-		var rc *TradesHistoryRecord
-		var RecStr string
-		rc = rec
-		return strconv.FormatInt(rc.TRADENO, 10)
-}
-*/
 
 var ArrayRows Rows
 var baskets Baskets
