@@ -1,9 +1,7 @@
-package interfases
+package AbstractTableStruct
 
-/*
 import "encoding/xml"
 
-type TableRecord interface {
+type AbstractRecord interface {
 	GetRecordFromXml(attrs *[]xml.Attr)
 }
-*/
