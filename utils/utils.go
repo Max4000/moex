@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+//goland:noinspection ALL
 func GetFile(file string) string {
 
 	f, err := os.Open(file)
