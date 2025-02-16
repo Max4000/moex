@@ -46,9 +46,8 @@ var baskets Baskets
 func (row *Row) GetRecordFromXml(attrs *[]xml.Attr) {
 
 	var tradeDate string
-
-	var layout = "2006-01-02"
-	var layoutTime = "2006-01-02 15:04:05"
+	layout := "2006-01-02"
+	layoutTime := "2006-01-02 15:04:05"
 	var Value string
 
 	for idx := range len(*attrs) {
