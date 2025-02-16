@@ -3,7 +3,7 @@ package deals
 import (
 	"bytes"
 	"encoding/xml"
-	"moex/AbstractTableStruct"
+	atas "moex/AbstractTableStruct"
 	"moex/TradesHistoryTable"
 	"moex/utils"
 )
@@ -11,19 +11,15 @@ import (
 const rowElementName = "row"
 const countRecordsInBasket = 100_000
 
-type Rows []AbstractTableStruct.AbstractRecord
-
-type Baskets []Rows
-
-var ArrayRows Rows
-var baskets Baskets
+var ArrayRows atas.Rows
+var baskets atas.Baskets
 
 func GetDeals() int {
 
 	xmlData := bytes.NewBufferString(utils.GetFile("C:\\\\Users\\\\Max\\\\Downloads\\\\trades-moex-stock-shares-2023-08-18xml\\trades.xml"))
 
 	d := xml.NewDecoder(xmlData)
-	var tRec AbstractTableStruct.AbstractRecord
+	var tRec atas.AbstractRecord
 	countAppendedRecords := 0
 	for t, _ := d.Token(); t != nil; t, _ = d.Token() {
 		switch se := t.(type) {
@@ -36,7 +32,7 @@ func GetDeals() int {
 					ArrayRows = append(ArrayRows, tRec)
 				} else {
 					baskets = append(baskets, ArrayRows)
-					ArrayRows = Rows{}
+					ArrayRows = atas.Rows{}
 					countAppendedRecords = 0
 				}
 			}

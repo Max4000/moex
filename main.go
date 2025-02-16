@@ -1,11 +1,12 @@
 package main
 
-import (
-	"fmt"
-	"moex/deals"
-)
+import ths "moex/TradesHistoryTable"
 
 func main() {
-	countRecords := deals.GetDeals()
-	fmt.Println(countRecords)
+	/*
+		countRecords := deals.GetDeals()
+		fmt.Println(countRecords)
+	*/
+	ths.Get()
+
 }
